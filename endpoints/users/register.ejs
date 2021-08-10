@@ -1,0 +1,44 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+            <div class="card shadow">
+                <img src="https://images.unsplash.com/photo-1627539615229-2e5a2779c287?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80"
+                    alt="" class="img-fluid">
+                <div class="card-body">
+                    <h5 class="card-title">Register</h5>
+                    <form action="/register" method="POST" class="validated-form" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label" for="email">Enter Email:</label>
+                            <input class="form-control" type="email" id="email" name="email"
+                                placeholder="SirLordKing98@usc.edu" autofocus required>
+                            <div class="valid-feedback">
+                                Cool Email!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="username">Enter Username:</label>
+                            <input class="form-control" type="text" id="username" name="username"
+                                placeholder="SirLordKing98" required>
+                            <div class="valid-feedback">
+                                Sick Username!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="password">Enter Password:</label>
+                            <input class="form-control" type="password" id="password" name="password" required>
+                            <div class="valid-feedback">
+                                Safe Password!
+                            </div>
+                        </div>
+                        <button class="btn btn-success">Register</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/formValidation') %>
