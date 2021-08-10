@@ -28,7 +28,7 @@ const app = express();
 const campgroundRoutes = require('./routes/campgrounds');
 const reviewRoutes = require('./routes/reviews');
 const userRoutes = require('./routes/users');
-const port = 5000;
+const port = process.env.PORT || 8080;
 
 mongoose.connect(dbUrl,
     {
